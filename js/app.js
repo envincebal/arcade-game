@@ -9,6 +9,7 @@ var Enemy = function(x,y) {
   this.sprite = 'images/enemy-bug.png';
   this.x = x;
   this.y = y;
+
 };
 
 // Update the enemy's position, required method for game
@@ -27,7 +28,15 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+var Player = function(){
+  this.sprite = "images/char-boy.png";
+  this.x;
+  this.y;
+}
 
+Player.prototype.update = function(){
+  
+}
 
 Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
