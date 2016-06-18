@@ -1,4 +1,5 @@
 // Enemies our player must avoid
+var score = 0;
 
 var Enemy = function() {
   // Variables applied to each of our instances go here,
@@ -33,15 +34,14 @@ var Player = function(){
   this.sprite = "images/char-boy.png";
   this.x = 202;
   this.y = 320;
- 
 }
 
 
 Player.prototype.update = function(){
-  var count = 0;
   if (this.y < 50){
-    count++;
-    document.getElementById("score").innerHTML = count;
+    
+    score++;
+    document.getElementById("score").innerHTML = score;
     this.reset();
   }
 }
