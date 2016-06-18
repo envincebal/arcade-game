@@ -1,15 +1,16 @@
 // Enemies our player must avoid
-var Enemy = function(x,y) {
-  
+
+var Enemy = function() {
   // Variables applied to each of our instances go here,
   // we've provided one for you to get started
-
+  var enemyPositionY = [61, 144, 227];
+  var enemySpeed = [100, 150, 200, 250, 300];
   // The image/sprite for our enemies, this uses
   // a helper we've provided to easily load images
   this.sprite = 'images/enemy-bug.png';
-  this.x = x;
-  this.y = y;
-
+  this.x = 0;
+  this.y = enemyPositionY[Math.floor(Math.random() * enemyPositionY.length)];
+  this.speed = enemySpeed[Math.floor(Math.random() * enemySpeed.length)];
 };
 
 // Update the enemy's position, required method for game
@@ -30,12 +31,37 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 var Player = function(){
   this.sprite = "images/char-boy.png";
-  this.x;
-  this.y;
+  this.x = 202;
+  this.y = 320;
+ 
 }
 
+
 Player.prototype.update = function(){
-  
+  var count = 0;
+  if (this.y < 50){
+    count++;
+    document.getElementById("score").innerHTML = count;
+    this.reset();
+  }
+}
+
+Player.prototype.reset = function(){
+  this.x = 202;
+  this.y = 320;
+}
+
+Player.prototype.handleInput = function(key){
+  if (key === "left" && this.x > 0){
+    this.x -= 101;
+  } else if (key === "right" && this.x < 400){
+    this.x += 101;
+  } else if (key === "up" && this.y > 2){
+    this.y -= 83;
+  } else if (key === "down" && this.y < 403){
+    this.y += 83;
+  }
+   console.log(this.x, this.y);
 }
 
 Player.prototype.render = function() {
