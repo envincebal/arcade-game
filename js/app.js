@@ -1,7 +1,10 @@
-// Enemies our player must avoid
+//Global variable that define the starting score,
+// which rows enemies start on Y axis and enemy speeds
 var score = 0;
 var enemyPositionY = [61, 144, 227];
 var enemySpeed = [150, 200, 250, 300, 350, 400];
+
+// Enemies our player must avoid
 var Enemy = function() {
   // Variables applied to each of our instances go here,
   // we've provided one for you to get started
@@ -25,13 +28,15 @@ Enemy.prototype.update = function(dt) {
     this.reset();
   }
     
-  if (this.x + 0 >= player.x && 
-      this.x < player.x + 50 && 
-      this.y + 0 >= player.y && 
-      this.y < player.y + 50){
+  // This defines the collision detection. If player
+  // collides with enemy, game and score resets.
+  if (this.x + 30 >= player.x && 
+      this.x < player.x + 30 && 
+      this.y + 30 >= player.y && 
+      this.y < player.y + 30){
         player.reset();
-        document.getElementById("score").innerHTML = score;
         score = 0;
+        document.getElementById("score").innerHTML = score;
       }
 };
 
@@ -114,3 +119,9 @@ document.addEventListener('keyup', function(e) {
 
   player.handleInput(allowedKeys[e.keyCode]);
 });
+
+window.addEventListener('keydown', function(e){
+    if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);

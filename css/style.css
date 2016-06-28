@@ -1,3 +1,11 @@
 body {
 	text-align: center;
 }
+
+.game-heading{
+	margin-top: 0px;
+}
+
+.game-score{
+	margin-bottom: 0px;
+}
