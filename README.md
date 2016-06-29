@@ -1,6 +1,9 @@
-frontend-nanodegree-arcade-game
+# Front End Nanodegree Arcade Game
 ===============================
 
-Students should use this [rubric](https://www.udacity.com/course/viewer/#!/c-nd001/l-2696458597/m-2687128535) for self-checking their submission.
+## Description
+A final project for the Udacity Front End Nanodegree course. This is an object-oriented project which recreates the classic Frogger video game. The goal is to move the play up the screen and reach the water while avoiding being hit by enemy bugs.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## How to play
+
+Use the link 
