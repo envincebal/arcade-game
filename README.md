@@ -6,4 +6,9 @@ A final project for the Udacity Front End Nanodegree course. This is an object-o
 
 ## How to play
 
-Use the link 
+Click <a href="http://envincebal.github.io/arcade-game/">HERE</a> to play
+
+* Use directional keys to move player up, down, left and right.
+* Reach the water at the top of the canvas while avoiding enemy bugs.
+* Each time you sucessfully reach the water, your score goes up by one.
+* If you collide with an enemy, the score resets back to 0.
