@@ -1,6 +1,11 @@
 //Global variable that define the starting score
 var score = 0;
 
+
+
+
+
+
 // Defines Enemy class
 var Enemy = function(){
   // The image/sprite for our enemies, this uses
@@ -10,6 +15,9 @@ var Enemy = function(){
   this.getSpeed();
   this.getPositionY();
 };
+
+
+
 
 // Returns random speed for Enemy instances
 Enemy.prototype.getSpeed = function(){
